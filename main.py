@@ -22,6 +22,8 @@ for i, mensagem in enumerate(contatos_df['Mensagem']):
     navegador.get(link)
     while len(navegador.find_elements_by_id("side")) < 1:
         time.sleep(1)
-    navegador.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]').send_keys(Keys.ENTER)
-    time.sleep(10)
+
+    time.sleep(5)
+    navegador.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[1]/div').send_keys(Keys.ENTER)
+    time.sleep(5)
 
